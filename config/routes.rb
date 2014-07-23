@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'tags/index'
+
+  get 'tags/show'
+
+  get 'tags/new'
+
+  post "tags" => "tags#create"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

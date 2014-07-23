@@ -1,0 +1,65 @@
+<html lang="ja">
+<head>
+<link rel=stylesheet type="text/css" href="style.css">
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta name="keywords" content="ホームページ制作,ホームページビルダー,webレイアウト,web標準,ez-HTML,次世代HTMLエディタ">
+<meta name="description" content="スタイルシートCSSで2カラムレイアウト例（左メニュー幅固定2カラム）です。">
+<meta name="ROBOTS" content="NOINDEX,NOFOLLOW">
+<title>左メニュー幅固定2カラムのサンプル</title>
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<h1>Site Title</h1>
+	</div>
+	<div id="main">
+		<div id="menu">
+		<h3><strong>＜タグ一覧＞</strong></h3>
+		<ul>
+          <!--
+			<li>Menu</li>
+			<li>Menu</li>
+			<li>Menu</li>
+			<li>Menu</li>
+			<li>Menu</li>
+			<li>Menu</li>
+            -->
+        <% @tags.each do |tag| %>
+          <li><%= tag.name %></li>
+        <% end %>          
+          <!--
+          -->
+		</ul>
+        <%= form_for Tag.new do |f| %>
+          <%= f.text_field :name %>
+          <%= f.submit %>
+        <% end %>
+		</div>
+		<div id="contents">
+			<h2>Sub Title</h2>
+			<p><strong>float:left</strong></p>
+			<p><strong>width:550px</strong></p>
+			<p>text text text text text text text text text text text text text text text text text text text
+			text text text text text text text text text text text text text text text text text text text text 
+			text text text text text text text text text text text text text text text text text text text text  
+			text text text text text text text text text text text text text text text text text text text text
+	  	text text text text text text text text text text text text text text text text text text text text
+			text text text text text text text text text text text text text text text text text text text text</p>
+	
+			<h2>Sub Title</h2>
+			<p>text text text text text text text text text text text text text text text text text text text
+			text text text text text text text text text text text text text text text text text text text text 
+			text text text text text text text text text text text text text text text text text text text text  
+			text text text text text text text text text text text text text text text text text text text text
+	  	text text text text text text text text text text text text text text text text text text text text
+			text text text text text text text text text text text text text text text text text text text text</p>
+		</div>
+	</div>
+	<div id="footer">
+	<p>Footer</p>
+  </div>
+</div>
+</body>
+</html>
