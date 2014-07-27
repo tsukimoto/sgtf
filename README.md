@@ -3,6 +3,7 @@ $ git clone https://github.com/tsukimoto/sgtf.git
 $ cd sgtf  
 $ bundle exec rake db:migrate  
 
+How to develop the tag app  
 1st Step  
 To make the Database  
 $ rails g model Tag name  
