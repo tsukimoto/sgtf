@@ -1,0 +1,17 @@
+<h1>Edit</h1>
+
+<%= form_for @tag do |f| %>
+
+<p>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+  <% if @tag.errors.any? %>
+  <%= @tag.errors.messages[:name][0] %>
+  <% end %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+
+<% end %>
